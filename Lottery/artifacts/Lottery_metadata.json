@@ -24,6 +24,13 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "calculateWinner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -90,7 +97,39 @@
 			},
 			{
 				"inputs": [],
+				"name": "lotteryStarted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "playersAddresses",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -107,6 +146,19 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ticketsBought",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -122,7 +174,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"LotteryNew.sol": "Lottery"
+			"PankakeLottery.sol": "Lottery"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -136,11 +188,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"LotteryNew.sol": {
-			"keccak256": "0x56f238d3faf6a7c2ea4dc493a11f7fd62c3a646034ce5a6776749eed8bbf05e7",
+		"PankakeLottery.sol": {
+			"keccak256": "0xbefd22ea8c3f217d55d6502a48c522e58ce3d7a46010c30e721f9c1bce7f6af4",
 			"urls": [
-				"bzz-raw://975329cbb9396ed7f4af2f34dc1a05804456b4960803ace218f0741c49b5c298",
-				"dweb:/ipfs/QmRUpmtUBeHBdxyJx8puS3ZB7SSPDm2uHVz4KVHzrToep3"
+				"bzz-raw://cc8acd494429f3d7ac294a8f7ae4e0158e95a5f8b9d1cf5316cc38d15cd2ce88",
+				"dweb:/ipfs/Qmb7fvE4YW3eH3ACP8dYWp8T2A7MyqS529V3syWYwnq6jE"
 			]
 		}
 	},
