@@ -12,6 +12,26 @@
 			},
 			{
 				"inputs": [],
+				"name": "EndLottery",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "NrticketsBought",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "Pull",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -28,13 +48,6 @@
 				"name": "buyTicket",
 				"outputs": [],
 				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "calculateWinner",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -78,7 +91,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "getTotalLotteryPrice",
+				"name": "getTotalLotteryPot",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -153,19 +166,6 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "ticketsBought",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -181,7 +181,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"PankakeLottery_MadebyRoman.sol": "Lottery"
+			"Lottery/UZHPancakeLottery.sol": "UZHPancakeLottery"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -195,11 +195,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"PankakeLottery_MadebyRoman.sol": {
-			"keccak256": "0x95138224b11f53492a4d3b562054a3398d60a5ee600ac7d5147e1710f2e49eb4",
+		"Lottery/UZHPancakeLottery.sol": {
+			"keccak256": "0xd234a38e10b7ec30dac88b3aaca50f4829ed3b1b73812171635ee38356c223f3",
 			"urls": [
-				"bzz-raw://2650c746b088ecea316f3ff2151f57e5cb20a049da3fc4b0aacc76188f7f5af3",
-				"dweb:/ipfs/QmcGqPftF73eVSK4fCyECt8odvyPjkxehunWpWzMoFxVMh"
+				"bzz-raw://284356a5ff4f610b0ac8f3a1facb256c012314fea9fd09832072244db2588e75",
+				"dweb:/ipfs/QmQh2LNdcnpuWu1hbEqKNtLohonTGtUVCvqL26hKfbP9a8"
 			]
 		}
 	},
