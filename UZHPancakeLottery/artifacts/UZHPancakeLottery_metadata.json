@@ -209,10 +209,10 @@
 	},
 	"sources": {
 		"UZHPancakeLottery.sol": {
-			"keccak256": "0xe5d32fc31f30f40944b2d985a200271411697495b98c77a9516ca0523b440f89",
+			"keccak256": "0x357e85e2f781f84686115ecf4e3c7194c71d1cf5e021d5d02885505cf8d02513",
 			"urls": [
-				"bzz-raw://a99465dc524a264fefe0e75063cc13d17e3ab4eec0756bab1577d63f4fd4a781",
-				"dweb:/ipfs/QmSGrRnCs34wrMqpkXVmZCuHF3C8SGrpsCXqPFZn4ifTAa"
+				"bzz-raw://439e281d6be5a11aa82bfed1f88c9e8fabd2f003af97df473576075a4fcc7ccd",
+				"dweb:/ipfs/QmQQmG25PDVPjnD6m3hDGstLexMXSNFpnaVMELrCM9iB4v"
 			]
 		}
 	},

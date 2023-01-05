@@ -37,7 +37,7 @@ contract UZHPancakeLottery {
 
     // function to change the ticket ticketprice
     function changeTicketPrice(uint _price) public onlyOwner {
-        // requirement that the lottery has started
+        // requirement that the lottery has not started
         require(lotteryStarted == false, "A lottery is running");
         ticketprice = _price * 1 ether;
     }
@@ -58,6 +58,8 @@ contract UZHPancakeLottery {
 
     // function to set the winning numbers randomly
     function BeginLottery() public onlyOwner {
+        // requirement that the lottery has not started
+        require(lotteryStarted == false, "A lottery is running");
         lotteryStarted = true;
         winningNumber = new uint[](6);
         uint counter = 0;
@@ -188,8 +190,8 @@ contract UZHPancakeLottery {
 
     // function to pull out the TotalLotteryPot, only for testing
     function Pull() public onlyOwner {
-        // requirement that the lottery has started
-        require(lotteryStarted == true, "No lottery is running");
+        // requirement that the lottery has not started
+        require(lotteryStarted == false, "A lottery is running");
         // converting the owner address to a payable address
         address payable ownerpayable = payable(owner);
         // requirement that the TotalLotteryPot is greater than 0
