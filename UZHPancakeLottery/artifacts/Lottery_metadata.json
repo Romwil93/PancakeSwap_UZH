@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.7+commit.e28d00a7"
+		"version": "0.8.11+commit.d7f03943"
 	},
 	"language": "Solidity",
 	"output": {
@@ -12,104 +12,19 @@
 			},
 			{
 				"inputs": [],
-				"name": "Pull",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256[]",
-						"name": "ticketNumbers",
-						"type": "uint256[]"
-					}
-				],
-				"name": "buyTicket",
+				"name": "enter",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "calculateWinner",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_price",
-						"type": "uint256"
-					}
-				],
-				"name": "changeTicketPrice",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getMyTicketNumbers",
-				"outputs": [
-					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getTicketPrice",
+				"name": "numPlayers",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getTotalLotteryPrice",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getWinningNumber",
-				"outputs": [
-					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "lotteryStarted",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -129,34 +44,15 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "playersAddresses",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "setWinningNumbers",
+				"name": "pickWinner",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "ticketsBought",
+				"name": "pot",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -181,7 +77,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"PankakeLottery_MadebyRoman.sol": "Lottery"
+			"UZHPancakeLottery/lotteryStarter.sol": "Lottery"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -195,11 +91,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"PankakeLottery_MadebyRoman.sol": {
-			"keccak256": "0x95138224b11f53492a4d3b562054a3398d60a5ee600ac7d5147e1710f2e49eb4",
+		"UZHPancakeLottery/lotteryStarter.sol": {
+			"keccak256": "0xde78e20ed5554baa567d7c3d5aeda8b357bfc7cf3294fce7ab932bb6d274d8a5",
 			"urls": [
-				"bzz-raw://2650c746b088ecea316f3ff2151f57e5cb20a049da3fc4b0aacc76188f7f5af3",
-				"dweb:/ipfs/QmcGqPftF73eVSK4fCyECt8odvyPjkxehunWpWzMoFxVMh"
+				"bzz-raw://4733134ffeec2f049a3d1ff94115089ea00a7a4c6ba70f9aefc9fcf1eae72be3",
+				"dweb:/ipfs/QmS6mTvRA5KX2ixPM8EFddqXFPrqqBbX9X1rLy672mNbgh"
 			]
 		}
 	},

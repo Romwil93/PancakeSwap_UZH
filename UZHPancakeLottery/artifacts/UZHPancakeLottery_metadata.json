@@ -12,6 +12,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "BeginLottery",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "EndLottery",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -161,8 +168,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "setWinningNumbers",
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_winningNumber",
+						"type": "uint256[]"
+					}
+				],
+				"name": "setWinningNumber",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -181,7 +194,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Lottery/UZHPancakeLottery.sol": "UZHPancakeLottery"
+			"UZHPancakeLottery.sol": "UZHPancakeLottery"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -195,11 +208,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"Lottery/UZHPancakeLottery.sol": {
-			"keccak256": "0xd234a38e10b7ec30dac88b3aaca50f4829ed3b1b73812171635ee38356c223f3",
+		"UZHPancakeLottery.sol": {
+			"keccak256": "0xe5d32fc31f30f40944b2d985a200271411697495b98c77a9516ca0523b440f89",
 			"urls": [
-				"bzz-raw://284356a5ff4f610b0ac8f3a1facb256c012314fea9fd09832072244db2588e75",
-				"dweb:/ipfs/QmQh2LNdcnpuWu1hbEqKNtLohonTGtUVCvqL26hKfbP9a8"
+				"bzz-raw://a99465dc524a264fefe0e75063cc13d17e3ab4eec0756bab1577d63f4fd4a781",
+				"dweb:/ipfs/QmSGrRnCs34wrMqpkXVmZCuHF3C8SGrpsCXqPFZn4ifTAa"
 			]
 		}
 	},

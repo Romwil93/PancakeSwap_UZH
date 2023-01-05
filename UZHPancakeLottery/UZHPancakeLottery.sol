@@ -1,6 +1,7 @@
 // Author: Roman Willi
 // UZHPancakeLottery is a contract that allows users to buy tickets and compete in a lottery. 
 // The contract was created independently from scratch according to the instructions of Pancakeswap
+pragma solidity >=0.8.0 <0.9.0;
 
 contract UZHPancakeLottery {
     // address of the owner of the contract
@@ -9,8 +10,8 @@ contract UZHPancakeLottery {
     uint[] private winningNumber;
     // mapping containing each player's ticket numbers
     mapping (address => uint[]) private playersTickets; 
-    // ticket price in ether
-    uint private price = 5 ether;
+    // ticket ticketprice in ether
+    uint private ticketprice = 5 ether;
     // total amount of ether spent on tickets
     uint private TotalLotteryPot;
     // total number of tickets bought
@@ -34,29 +35,35 @@ contract UZHPancakeLottery {
     }
 
 
-    // function to change the ticket price
+    // function to change the ticket ticketprice
     function changeTicketPrice(uint _price) public onlyOwner {
-        price = _price * 1 ether;
+        // requirement that the lottery has started
+        require(lotteryStarted == false, "A lottery is running");
+        ticketprice = _price * 1 ether;
     }
 
-    // view function to get the ticket price 
+    // view function to get the ticket ticketprice 
     function getTicketPrice() public view returns (uint) {
-        return price / 1 ether;
+        // requirement that the lottery has started
+        require(lotteryStarted == true, "No lottery is running");
+        return ticketprice / 1 ether;
     }
 
     // view function to get the total amount of ether spent on tickets
     function getTotalLotteryPot() public view returns (uint) {
+        // requirement that the lottery has started
+        require(lotteryStarted == true, "No lottery is running");
         return TotalLotteryPot / 1 ether;
     }
 
     // function to set the winning numbers randomly
-    function setWinningNumbers() public onlyOwner {
+    function BeginLottery() public onlyOwner {
         lotteryStarted = true;
         winningNumber = new uint[](6);
         uint counter = 0;
         // loop that assigns a random number to each index of the array
         for (uint i = 0; i < 6; i++) {
-            uint256 randomNumber = uint256(keccak256(abi.encodePacked(block.timestamp, i))) % 10;
+            uint256 randomNumber = uint256(keccak256(abi.encodePacked(block.difficulty, block.timestamp, i))) % 10;
             if (randomNumber != 0) {
                 winningNumber[counter] = randomNumber; 
                 counter++;
@@ -64,16 +71,29 @@ contract UZHPancakeLottery {
         }
     }
 
+    //Just for testing purposes to set a specific winning number.
+    function setWinningNumber(uint[] memory _winningNumber) public onlyOwner {
+        require(_winningNumber.length == 6);
+        for(uint i = 0; i < _winningNumber.length; i++) {
+            require(_winningNumber[i] <= 9);
+        }
+        winningNumber = _winningNumber;
+    }
+
     // view function to get the winning numbers
     //  just for testing purposes public
     function getWinningNumber() public view onlyOwner returns (uint[] memory) {
+        // requirement that the lottery has started
+        require(lotteryStarted == true, "No lottery is running");
         return winningNumber;
     }
 
     // function to buy a ticket
     function buyTicket(uint[] memory ticketNumbers) public payable {
-        // requirement that the amount sent is equal to the price of the ticket
-        require(msg.value == price, "Wrong amount");
+        // requirement that the lottery has started
+        require(lotteryStarted == true, "No lottery is running");
+        // requirement that the amount sent is equal to the ticketprice of the ticket
+        require(msg.value == ticketprice, "Wrong amount");
         // requirement that the ticket contains 6 numbers
         require(ticketNumbers.length == 6, "Wrong number of numbers");
         // loop to check that all the numbers are between 0 and 10
@@ -168,6 +188,8 @@ contract UZHPancakeLottery {
 
     // function to pull out the TotalLotteryPot, only for testing
     function Pull() public onlyOwner {
+        // requirement that the lottery has started
+        require(lotteryStarted == true, "No lottery is running");
         // converting the owner address to a payable address
         address payable ownerpayable = payable(owner);
         // requirement that the TotalLotteryPot is greater than 0
