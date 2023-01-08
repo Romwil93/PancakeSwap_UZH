@@ -5,7 +5,7 @@ pragma solidity >=0.8.0 <0.9.0;
 
 contract UZHPancakeLottery {
     // address of the owner of the contract
-    address public owner;
+    address private owner;
     // array containing the winning numbers
     uint[] private winningNumber;
     // mapping containing each player's ticket numbers
@@ -15,7 +15,7 @@ contract UZHPancakeLottery {
     // total amount of ether spent on tickets
     uint private TotalLotteryPot;
     // total number of tickets bought
-    uint public NrticketsBought = 0; 
+    uint private NrticketsBought = 0; 
     // array containing the addresses of the players
     address [] public playersAddresses;
     // bool indicating whether the lottery has started
@@ -56,6 +56,24 @@ contract UZHPancakeLottery {
         return TotalLotteryPot / 1 ether;
     }
 
+    // view function to get the total amount of tickets bought
+    function NrOfticketsBought() public view returns (uint) {
+        return NrticketsBought;
+    }
+
+    // view function to get the owner address back
+    function OwnerAddress() public view returns (address) {
+        return owner;
+    }
+
+    // view function to get status of lottery back
+    //1 = lottery starte & 0 = lottery stopped
+    function Lotterystatus() public view returns (bool) {
+        return lotteryStarted;
+    }
+
+
+
     // function to set the winning numbers randomly
     function BeginLottery() public onlyOwner {
         // requirement that the lottery has not started
@@ -73,8 +91,11 @@ contract UZHPancakeLottery {
         }
     }
 
+
+
     //Just for testing purposes to set a specific winning number.
     function setWinningNumber(uint[] memory _winningNumber) public onlyOwner {
+        require(msg.sender == owner);
         require(_winningNumber.length == 6);
         for(uint i = 0; i < _winningNumber.length; i++) {
             require(_winningNumber[i] <= 9);

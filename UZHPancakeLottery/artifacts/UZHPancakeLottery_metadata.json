@@ -26,12 +26,38 @@
 			},
 			{
 				"inputs": [],
-				"name": "NrticketsBought",
+				"name": "Lotterystatus",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "NrOfticketsBought",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "OwnerAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -136,19 +162,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -194,7 +207,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"UZHPancakeLottery.sol": "UZHPancakeLottery"
+			"UZHPancakeLottery/UZHPancakeLottery.sol": "UZHPancakeLottery"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -208,11 +221,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"UZHPancakeLottery.sol": {
-			"keccak256": "0x357e85e2f781f84686115ecf4e3c7194c71d1cf5e021d5d02885505cf8d02513",
+		"UZHPancakeLottery/UZHPancakeLottery.sol": {
+			"keccak256": "0xaec417b94afce86b78588066bc3609ba3f47d3b29321d2aaf2b2ec6aec681878",
 			"urls": [
-				"bzz-raw://439e281d6be5a11aa82bfed1f88c9e8fabd2f003af97df473576075a4fcc7ccd",
-				"dweb:/ipfs/QmQQmG25PDVPjnD6m3hDGstLexMXSNFpnaVMELrCM9iB4v"
+				"bzz-raw://c5b7fbce0b18f76407a3bd800cbe1f80379ab26de05d41605e4bff9e41594bfd",
+				"dweb:/ipfs/QmZJe9xW91QLqfMnwoS3ku6M1YtS9tCd2Ms2HwVQ6D3ZcW"
 			]
 		}
 	},
