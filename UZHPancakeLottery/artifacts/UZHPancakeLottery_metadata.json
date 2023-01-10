@@ -207,7 +207,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"UZHPancakeLottery/UZHPancakeLottery.sol": "UZHPancakeLottery"
+			"UZHPancakeLottery.sol": "UZHPancakeLottery"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -221,11 +221,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"UZHPancakeLottery/UZHPancakeLottery.sol": {
-			"keccak256": "0xaec417b94afce86b78588066bc3609ba3f47d3b29321d2aaf2b2ec6aec681878",
+		"UZHPancakeLottery.sol": {
+			"keccak256": "0x3b9d1c42e1805b102bc18f7f28b2b1ebcb71f28e05dcd9aacdb4bcd35f027848",
 			"urls": [
-				"bzz-raw://c5b7fbce0b18f76407a3bd800cbe1f80379ab26de05d41605e4bff9e41594bfd",
-				"dweb:/ipfs/QmZJe9xW91QLqfMnwoS3ku6M1YtS9tCd2Ms2HwVQ6D3ZcW"
+				"bzz-raw://7fef33073f54d7c45d66c535002cf9ed016f798f8b38670307e0fbbf9c67671c",
+				"dweb:/ipfs/QmSUd5d1gCGHEctMP6eMHDRRKTKcHTdUHUzhQXE4QD2vjf"
 			]
 		}
 	},

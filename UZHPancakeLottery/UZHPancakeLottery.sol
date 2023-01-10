@@ -200,6 +200,15 @@ contract UZHPancakeLottery {
             percentage = 0;
             reward = 0;
         }
+        
+        //If we wish to burn 20% of the pot than we can just send the ETH to an address without owner.
+        //I didn't do it because I din't want to mine new ETH all the time. But code below works.
+        //uint burnamount = (TotalLotteryPot * 20) / 100;
+        //address payable burnaddress = payable(0x0000000000000000000000000000000000000000);
+        //burnaddress.transfer(burnamount);
+
+
+
 
         // resetting all the variables
         NrticketsBought = 0;
