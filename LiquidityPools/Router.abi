@@ -24,12 +24,12 @@
 			},
 			{
 				"internalType": "uint256",
-				"name": "amountA",
+				"name": "amountADesired",
 				"type": "uint256"
 			},
 			{
 				"internalType": "uint256",
-				"name": "amountB",
+				"name": "amountBDesired",
 				"type": "uint256"
 			}
 		],
@@ -49,6 +49,34 @@
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "tokenIn",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "tokenOut",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amountIn",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amountOutMin",
+				"type": "uint256"
+			}
+		],
+		"name": "exchangeTokens",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -120,34 +148,6 @@
 			}
 		],
 		"name": "setFactory",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "tokenIn",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
-				"name": "tokenOut",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "amountIn",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "amountOutMin",
-				"type": "uint256"
-			}
-		],
-		"name": "swap",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
