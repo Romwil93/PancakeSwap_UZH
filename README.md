@@ -9,9 +9,9 @@
 - "TokenSwap.sol": Swap contract
 - "PancakeToken.sol": Token contract
 
-## Liquidity pools
+## Liquidity pools
 
-## Lottery
+## Lottery
 
 
-## NFT Marketplace
+## NFT Marketplace
