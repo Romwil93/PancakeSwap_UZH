@@ -6,6 +6,9 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 // Token Smart Contract
+// constructor takes four addresses as an input: address of token 1, token 2 and account 1 and account 2 
+// to swap tokens, first tokens are needed -> create token with Token Smart Contract or use existing tokens and their address 
+
 contract TokenSwap {
     IERC20 public token1;
     address public owner1;
