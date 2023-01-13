@@ -8,3 +8,10 @@
 - "Archive": different files tested during development. Not relevant for submission! 
 - "TokenSwap.sol": Swap contract
 - "PancakeToken.sol": Token contract
+
+## Liquidity pools
+
+## Lottery
+
+
+## NFT Marketplace
