@@ -16,6 +16,7 @@
   - 'Pool.abi for loading deployed liquidity pools, as well as 
   - 'ERC20.abi' for loading tokens following the ERC-20 standard.
 - contracts folder: Contains the Solidity code files for the factory ('FactoryContract.sol'), the router ('RouterContract.sol'), and liquidity pool ('PoolContract.sol') smart contracts.
+- 'README.txt: Contains information on currently deployed smart contract instances for testing purposes.
 
 ## Lottery
 
