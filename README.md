@@ -10,6 +10,12 @@
 - "PancakeToken.sol": Token contract
 
 ## Liquidity pools
+- 'LiquidityPoolInteraction.jpynb': For the user interaction with and deployment of the liquidity pool functionality. It requires various abi- and bin-files, namely:
+  - 'Factory.abi' and 'Factory.bin' for deploying and loading the factory smart contract, 
+  - 'Router.abi' and 'Router.bin' for deploying and loading the router smart contract, 
+  - 'Pool.abi for loading deployed liquidity pools, as well as 
+  - 'ERC20.abi' for loading tokens following the ERC-20 standard.
+- contracts folder: Contains the Solidity code files for the factory ('FactoryContract.sol'), the router ('RouterContract.sol'), and liquidity pool ('PoolContract.sol') smart contracts.
 
 ## Lottery
 
