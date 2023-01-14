@@ -17,7 +17,10 @@
 - contracts folder: Contains the Solidity code files for the factory ('FactoryContract.sol'), the router ('RouterContract.sol'), and liquidity pool ('PoolContract.sol') smart contracts.
 - 'README.txt: Contains information on currently deployed smart contract instances for testing purposes.
 
-## Lottery
+## UZHPancakeLottery
+- 'lotteryStarter.sol': This contract creates a lottery where players can enter by sending a certain amount of ether and the owner can pick a winner at random.
+- 'UZHPancakeLottery.sol': This UZHPancakeLottery contract allows users to buy tickets and compete in a lottery, programmed independently from scratch according to the instructions of Pancakeswap.
+- 'UZHPancakeLotteryNotebook.ipynb': This Notebook allows you to interact with the UZHPancakeLottery.sol contract via web3. To run it successfully, all the required python libraries must be downloaded, and the the'UZHPancakeLottery.abi' and artifacts folder with all the JSON files must be in the same folder. For successful implementation, you must also deploy the UZHPancakeLottery.sol contract on your own and use your contract address, JSON, and abi files in the UZHPancakeLottery Notebook; otherwise, you are not the contract owner and can't interact with the contract appropriately.
 
 
 ## NFT Marketplace
